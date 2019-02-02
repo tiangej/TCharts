@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>折线图 - 大数据（20万）</title>
+    </head>
+
+    <body>
+        <div id='B7' style='position:relative; width: 600px; height:300px; '></div>
+
+        <script src='../dist/line.js'></script>
+        <script>
+
+            createChart('B7');
+            
+            function createChart(divID)
+            {            
+                //1. 生成图表对象
+                let chart = new T.line.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let base = +new Date(1968, 9, 3);
+                let oneDay = 24 * 3600 * 1000;
+                let category = ['2001/01/01'];                
+                let data = [Math.random() * 300];                
+                for (let i = 1; i < 200000; i++) {
+                    let now = new Date(base += oneDay);
+                    category.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
+                    data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+                }
+
+                let series1 = new T.line.Series();
+                series1.name = '系列1';
+                series1.data = data ;
+                
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.title = '折线图';
+                chartInfo_In.areaFlag = true;
+                chartInfo_In.series = [ series1 ];
+                
+                //5. 设置类目轴数据
+                let cAxisInfo_In = chart.cAxisInfo_In ;
+                cAxisInfo_In.interval = 50000;
+                cAxisInfo_In.categorys = category;    
+    
+                //6. 设置数值轴数据
+                //无    
+    
+                //7. 开始图表绘制
+                chart.start();
+            }
+        </script>
+        
+    </body>
+</html>

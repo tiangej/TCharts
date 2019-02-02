@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>饼图 - 选择项</title>
+    </head>
+
+    <body>
+        <div id='D6' style='position:relative; width: 600px; height:300px; '></div>
+
+        <script src='../dist/pie.js'></script>
+        <script>
+
+            createChart('D6');
+            
+            function createChart(divID)
+            {            
+                //1. 生成图表对象
+                let chart = new T.pie.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let series1 = new T.pie.Series();
+                series1.name = '系列1';
+                series1.data = [ {name:'分类1', value: 10} ,
+                              {name:'分类2', value: 30} ,
+                              {name:'分类3', value: 50} ,
+                              {name:'分类4', value: 190} ];
+                
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.title = '饼图';
+                chartInfo_In.selectedIndex = 3;       //第四项被选中
+                chartInfo_In.series = [series1];
+    
+                //5. 开始图表绘制
+                chart.start();
+            }
+        </script>
+        
+    </body>
+</html>

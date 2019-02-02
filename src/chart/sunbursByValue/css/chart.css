@@ -1,0 +1,20 @@
+/* 
+ * 图表内全局设定（必须项目）
+ * 用于清除（初始化）所有默认内外边距 
+ */
+.sunbursByValueChartDiv *{
+    padding: 0px ;            /* 清除（初始化）图表内所有元素的默认内边距 */
+    margin: 0px ;              /* 清除（初始化）图表内所有元素的默认外边距 */
+}
+
+
+
+/* 
+ * 绘制主体的Canvas
+ */
+.sunbursByValueChartDiv canvas {
+    position: absolute;            /* 绝对定位，这样2个块元素（Canvas）才会重叠在一起 */
+    left: 0px;
+    top: 0px;
+    border: thin solid #aaaaaa;
+}

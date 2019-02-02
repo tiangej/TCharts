@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>散点图 - 数据花活儿</title>
+    </head>
+
+    <body>
+        <div id='F2' style='position:relative; width: 600px; height:300px; '></div>
+
+        <script src='../dist/scatter.js'></script>
+        <script>
+            createChart('F2');
+            
+            function createChart(divID)
+            {            
+                //1. 生成图表对象
+                let chart = new T.scatter.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let data1 = [];
+                let data2 = [];
+                
+                let len = 10000;
+                let x = 0;
+                while (len--) {
+                    x = (Math.random() * 10).toFixed(3) - 0;
+                    data1.push([
+                        x,
+                        //Math.random() * 10
+                        (Math.sin(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0
+                    ]);
+                }
+                
+                len = 10000;
+                x = 0;
+                while (len--) {
+                    x = (Math.random() * 10).toFixed(3) - 0;
+                    data2.push([
+                        x,
+                        //Math.random() * 10
+                        (Math.cos(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0
+                    ]);
+                }
+    
+                let series1 = new T.scatter.Series();
+                series1.name = '系列1';
+                series1.data =data1 ;
+    
+                let series2 = new T.scatter.Series();
+                series2.name = '系列2';
+                series2.data = data2 ;
+                
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.title = '散点图';
+                chartInfo_In.schema = ['x','y'] ;
+                chartInfo_In.radius = 1;                  //散点半径
+                chartInfo_In.series = [series1,series2];
+    
+                //5. 开始图表绘制
+                chart.start();
+            }
+            
+        </script>
+    </body>
+</html>

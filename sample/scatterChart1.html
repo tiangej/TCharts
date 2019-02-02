@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>散点图 - 数据单元个数不同的多组系列</title>
+    </head>
+
+    <body>
+        <div id='F1' style='position:relative; width: 600px; height:300px; '></div>
+
+        <script src="./testData/scatterJsonData.js"></script>
+        
+        <script src='../dist/scatter.js'></script>
+        <script>
+
+            createChart('F1');
+            
+            function createChart(divID)
+            {            
+                //1. 生成图表对象
+                let chart = new T.scatter.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let series1 = new T.scatter.Series();
+                series1.name = '女人';
+                series1.data = data1 ;
+    
+                let series2 = new T.scatter.Series();
+                  series2.name = '男人';
+                  series2.data = data2 ;
+                
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.title = '散点图';
+                chartInfo_In.xAxisName = '（身高 cm）';
+                chartInfo_In.yAxisName = '（体重 kg）';
+                chartInfo_In.schema = ['身高','体重'] ;                
+                chart.xAxisInfo_In.zeroExtend = false ;
+                chart.yAxisInfo_In.zeroExtend = false ;                
+                chartInfo_In.series = [series1,series2];
+    
+                //5. 开始图表绘制
+                chart.start();
+            }
+            
+        </script>
+    </body>
+
+</html>

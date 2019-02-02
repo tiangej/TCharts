@@ -1,0 +1,28 @@
+{
+  "name": "tcharts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build-d5": "webpack --config webpack.config.es5.dev",
+    "build-p5": "webpack --config webpack.config.es5.prod",
+    "build-d6": "webpack --config webpack.config.es6.dev",
+    "build-p6": "webpack --config webpack.config.es6.prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.5"
+  }
+}

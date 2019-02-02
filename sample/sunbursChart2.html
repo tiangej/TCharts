@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>旭日图（末枝等分型） - 选择项</title>
+    </head>
+
+    <body>
+        <div id='G2' style='position:relative; width: 600px; height:600px; '></div>
+
+        <script src='testData/sunbursJsonData.js'></script>
+		
+        <script src='../dist/sunburs.js'></script>
+        <script>
+			
+            createChart('G2');
+            
+            function createChart(divID)
+            {            
+                //1. 生成图表对象
+                let chart = new T.sunburs.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let series1 = new T.sunburs.Series();
+                series1.data =sunbursJsonData ;
+                
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.title = '旭日图（末枝等分型）';
+                chartInfo_In.selectedIndex = 0;
+                chartInfo_In.series = [series1];
+    
+                //5. 开始图表绘制
+                chart.start();
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>柱状图 - 多组数据系列</title>
+    </head>
+
+    <body>
+        <div id='A11' style='position:relative; width: 600px; height:300px; '></div>
+
+        <script src='../dist/column.js'></script>
+        <script>
+
+            createChart('A11');
+            
+            function createChart(divID)
+            {
+                //1. 生成图表对象
+                let chart = new T.column.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let data1 = [];
+                let datA11 = [];
+                let data3 = [];                
+                for (let i = 0; i < 9; i++) {
+                    data1.push(Number( (Math.random() * 2).toFixed(2)) );
+                    datA11.push(Number( -Math.random().toFixed(2)));
+                    data3.push(Number( -(Math.random() * 5).toFixed(2)));
+                }
+                
+                let series1 = new T.column.Series();
+                series1.name = '系列1';
+                series1.data = data1;
+    
+                 let series2 = new T.column.Series();
+                 series2.name = '系列2';
+                 series2.data = datA11;
+                  
+                 let series3 = new T.column.Series();
+                 series3.name = '系列3';
+                 series3.data = data3;
+
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.series = [series1,series2,series3];
+        
+                //5. 设置类目轴数据
+                let cAxisInfo_In = chart.cAxisInfo_In ;
+                chartInfo_In.title = '柱状图';
+                cAxisInfo_In.categorys = ['分类1','分类2','分类3','分类4','分类5','分类6','分类7','分类8','分类9'];
+                    
+                //6. 设置数值轴数据
+                //无    
+    
+                //7. 开始图表绘制
+                chart.start();
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>旭日图（末枝不等分型） </title>
+    </head>
+
+    <body>
+        <div id='H1' style='position:relative; width: 600px; height:400px; '></div>
+
+        <script src='testData/sunbursByValueJsonData.js'></script>
+		
+        <script src='../dist/sunbursByValue.js'></script>
+        <script>
+			
+            createChart('H1');
+            
+            function createChart(divID)
+            {            
+                //1. 生成图表对象
+                let chart = new T.sunbursByValue.Chart(divID);
+                
+                //2. 停止图表绘制
+                chart.stop() ;
+                
+                //3. 准备数据
+                let series1 = new T.sunbursByValue.Series();
+                series1.data =sunbursByValueJsonData ;
+                
+                //4. 设置图表信息
+                let chartInfo_In = chart.chartInfo_In ;
+                chartInfo_In.title = '旭日图（末枝不等分型）';
+                chartInfo_In.series = [series1];
+    
+                //5. 开始图表绘制
+                chart.start();
+            }
+        </script>
+        
+    </body>
+</html>

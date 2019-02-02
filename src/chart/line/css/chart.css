@@ -1,0 +1,97 @@
+/* 
+ * 图表内全局设定（必须项目）
+ * 用于清除（初始化）所有默认内外边距 
+ */
+.lineChartDiv *{
+    padding: 0px ;            /* 清除（初始化）图表内所有元素的默认内边距 */
+    margin: 0px ;              /* 清除（初始化）图表内所有元素的默认外边距 */
+    line-height: 1.5 ;
+}
+
+
+
+/* 
+ * 绘制主体的Canvas
+ */
+.lineChartDiv canvas {
+    position: absolute;            /* 绝对定位，这样2个块元素（Canvas）才会重叠在一起 */
+    left: 0px;
+    top: 0px;
+    border: thin solid #aaaaaa;
+}
+
+
+            
+/* 
+ * Tip
+ */
+.lineChartTipDiv {
+    position: absolute;            /* 绝对定位，这样才会跟随鼠标位置 */
+    
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    background: rgba(0, 0, 0, 0.6);
+    
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;     /* 阴影 */
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+    
+    font-family: Microsoft YaHei;      /* Tip字体 */
+    font-size: 12px;              /* Tip字体尺寸 */
+    color: #eeeeee;               /* Tip文字颜色 */
+}
+
+
+.lineChartTipDiv p {
+    padding: 0px;  
+    margin: 0px ;       
+}
+
+/* 
+ * Tip -- table
+ */
+.lineChartTipDiv table{
+    padding: 0px;  
+    margin: 0px ;       
+    border:none;
+    
+    border-collapse: collapse;    /* 合并边框 */
+    border-spacing: 0;            /* 设置相邻单元格的边框间的距离 */
+}
+
+
+
+/* 
+ * Tip -- table -- td
+ */
+.lineChartTipDiv table td {
+    padding: 0px;         
+    padding-right: 10px;          /* 在列数据之间留余白 */
+    margin: 0px ;
+    white-space:nowrap;           /* 禁止换行 */
+    border: 0;
+}
+
+
+
+/* 
+ * Tip -- table -- td -- span
+ */
+.lineChartTipDiv table td span {
+    display:inline-block;           /* 转成行内块，否则不能显示出来 */
+    /*border-radius: 10px;            /* 圆形 */
+    width: 9px;
+    height: 9px;
+}
+
+
+
+/* 
+ * Tip -- table -- 第三列
+ */
+.lineChartTipDiv .thirdCol {
+    text-align: right;           /* 靠右对齐 */
+}
