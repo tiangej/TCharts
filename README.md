@@ -51,6 +51,7 @@ TCharts希望能够做到这一点！
 ( https://dev.tencent.com/u/tiangej/p/TCharts/git )
 - [GitHub](https://github.com/tiangej/TCharts)   
 ( https://github.com/tiangej/TCharts )  
+
 源代码的【dist】目录中，存放着打包后的TCharts库文件。
 
 **注意**
