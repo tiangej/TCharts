@@ -27,8 +27,8 @@ OpenSource
 
 
 ## Why Choose TCharts ##
-市面上开源js图表库有很多，代表作诸如 ECharts 、 D3 、 HighChart。
-这些库的源代码过于复杂，难于全面掌握。
+市面上开源js图表库有很多，代表作诸如 ECharts 、 D3 、 HighChart。  
+这些库的源代码过于复杂，难于全面掌握。  
 想要从零开始，开发个性化图表，并不容易。
 
 这些图表库的主要目的  
