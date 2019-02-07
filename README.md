@@ -1,4 +1,4 @@
-![示例图](https://tcharts.tech/images/examples.png)
+![示例图](https://www.tcharts.tech/images/examples.png)
 
 
 
@@ -47,11 +47,13 @@ TCharts希望能够做到这一点！
 
 
 ## Download ##
-[GitHub](https://github.com/tiangej/TCharts)   
-（https://github.com/tiangej/TCharts ）  
+- [Coding](https://dev.tencent.com/u/tiangej/p/TCharts/git)
+( https://dev.tencent.com/u/tiangej/p/TCharts/git )
+- [GitHub](https://github.com/tiangej/TCharts)   
+( https://github.com/tiangej/TCharts )  
 源代码的【dist】目录中，存放着打包后的TCharts库文件。
 
 **注意**
 TCharts并没有将各类图表打包为一个js库，而是按照图表类别分别打包。
 
-![TCharts库文件](https://tcharts.tech/images/TChartsLibrary.png)
+![TCharts库文件](https://www.tcharts.tech/images/TChartsLibrary.png)
