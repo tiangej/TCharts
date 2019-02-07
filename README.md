@@ -47,7 +47,7 @@ TCharts希望能够做到这一点！
 
 
 ## Download ##
-- [Coding](https://dev.tencent.com/u/tiangej/p/TCharts/git)
+- [Coding](https://dev.tencent.com/u/tiangej/p/TCharts/git)  
 ( https://dev.tencent.com/u/tiangej/p/TCharts/git )
 - [GitHub](https://github.com/tiangej/TCharts)   
 ( https://github.com/tiangej/TCharts )  
