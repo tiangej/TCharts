@@ -1,22 +1,18 @@
----
-title: What is TCharts
----
-
-![示例图](/images/examples.png)
+![示例图](https://tcharts.tech/images/examples.png)
 
 
-<br>
-## What is it ##
+
+## What is it
 Javascript / Canvas / Chart
 ES6
 OpenSource
 
-<br>
-## License ##
+
+## License
 **<label style="color:red">MIT</label>**
 
 
-<br>
+
 ## Types ##
 1. 柱状图（Column）
 2. 折线图（Line）
@@ -29,7 +25,7 @@ OpenSource
 
 
 
-<br>
+
 ## Why Choose TCharts ##
 市面上开源js图表库有很多，代表作诸如 ECharts 、 D3 、 HighChart。
 这些库的源代码过于复杂，难于全面掌握。
@@ -49,7 +45,7 @@ TCharts希望能够做到这一点！
 
 
 
-<br>
+
 ## Download ##
 [GitHub](https://github.com/tiangej/TCharts) 
 （https://github.com/tiangej/TCharts ）
@@ -58,4 +54,4 @@ TCharts希望能够做到这一点！
 **注意**
 TCharts并没有将各类图表打包为一个js库，而是按照图表类别分别打包。
 
-![TCharts库文件](/images/TChartsLibrary.png)
+![TCharts库文件](https://tcharts.tech/images/TChartsLibrary.png)
